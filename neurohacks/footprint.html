@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>
+    <script type = "text/javascript" src = "main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+        
+</head>
+<body>
+    <section class = "header">
+        <nav>
+            <a href="index.html" class="logo">Footprint
+                
+            </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="footprint.html">Calculator</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+            
+        </nav>
+        <div class = "text_box">
+            
+            <p>Input your information to calculate your carbon footprint.</p>
+            <p>The calculator uses inputted information to generate the user's carbon footprint and carbon score.</p>
+            <p>The carbon score is meant to display the user's ranking when it comes to energy conservation.</p>
+            
+        </div>
+        
+    </section>
+    <section class = "about-us">
+        <div class = "row">
+            <form action = "result.html" method = "POST">
+                <input type = "number" id = "energy" name = "energy" placeholder = "Enter energy usage..."/>
+                <input type = "number" id = "flights1" name="flights1" min="0" max="100" placeholder = "How many flights have you been on(Less than 4 hours)..."/>
+                <input type = "number" id = "flights2" name="flights2" min="0" max="100" placeholder = "How many flights have you been on(Greater than 4 hours)..."/>
+                <input type = "number" id = "car" name = "car" min = "0" placeholder = "Miles driven by car in a year"/>
+                <input type = "submit" onclick="handleSubmit()"/>
+
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
